@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import Header from "../components/Layout/Header/Header";
+import Policy from "../components/Layout/Policy/Policy";
+import Footer from "../components/Layout/Footer/Footer";
+import Contact from "../components/Contact/Contact";
 
 const ContactPage = () => {
   return (
-    <div>ContactPage</div>
-  )
-}
+    <>
+      <Header />
+      <Contact />
+      <Policy />
+      <Footer />
+    </>
+  );
+};
 
-export default ContactPage
+export default ContactPage;
