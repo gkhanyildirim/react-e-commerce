@@ -1,13 +1,17 @@
+import { useState } from "react";
 import Footer from "../components/Layout/Footer/Footer";
 import Header from "../components/Layout/Header/Header";
+import Search from "../components/Modals/Search/Search";
 
-const MainLayout = (props) => {
+const MainLayout = ({children}) => {
+  const [isSearchShow, setIsSearchShow] = useState(false);
   return (
-    <>
-      <Header />
-      {props.children}
+    <div className="main-layout">
+      <Search isSearchShow = {isSearchShow} setIsSearchShow={setIsSearchShow}/>
+      <Header setIsSearchShow={setIsSearchShow}/>
+      {children}
       <Footer />
-    </>
+    </div>
   );
 };
 

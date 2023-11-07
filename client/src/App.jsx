@@ -16,7 +16,7 @@ function App() {
       {/* <ContactPage /> */}
       {/* <AuthPage /> */}
       {/* <CartPage /> */}
-      {/* <BlogPage /> */}
+      <BlogPage />
       {/* <BlogDetailsPage /> */}
       {/* <ProductDetailsPage /> */}
       </>
