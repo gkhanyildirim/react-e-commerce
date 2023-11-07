@@ -18,7 +18,7 @@ function App() {
       {/* <CartPage /> */}
       {/* <BlogPage /> */}
       {/* <BlogDetailsPage /> */}
-      <ProductDetailsPage />
+      {/* <ProductDetailsPage /> */}
       </>
   );
 }
