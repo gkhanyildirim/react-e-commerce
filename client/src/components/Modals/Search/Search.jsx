@@ -47,6 +47,7 @@ const Search = ({isSearchShow,setIsSearchShow}) => {
         </div>
         <i className="bi bi-x-circle" id="close-search" onClick={()=> setIsSearchShow(false)}></i>
       </div>
+      <div className="modal-overlay" onClick={()=> setIsSearchShow(false)}></div>
     </div>
   );
 };
