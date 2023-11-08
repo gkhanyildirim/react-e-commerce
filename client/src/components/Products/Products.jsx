@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProductItem from "./ProductItem";
 import Slider from "react-slick";
-import ProductsData from "../../data.json";
+import productsData from "../../data.json";
 import "./products.css";
 
 function NextBtn({ onClick }) {
@@ -21,7 +21,7 @@ function PrevBtn({ onClick }) {
 }
 
 const Products = () => {
-  const [products] = useState(ProductsData);
+  const [products] = useState(productsData);
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -29,6 +29,8 @@ const Products = () => {
     slidesToScroll: 1,
     nextArrow: <NextBtn />,
     prevArrow: <PrevBtn />,
+    autoplaySpeed: 3000,
+    autoplay : true,
     responsive:[
       {
       breakpoint: 992,
@@ -44,7 +46,7 @@ const Products = () => {
         },
     ],
   };
-  
+
   return (
     <section className="products">
       <div className="container">
