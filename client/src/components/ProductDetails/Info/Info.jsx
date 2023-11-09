@@ -1,6 +1,10 @@
+import { useState } from "react";
 import "./info.css";
 
 const Info = () => {
+  const [activeColor, setActiveColor] = useState();
+
+
   return (
     <div className="product-info">
       <h1 className="product-title">Ridley High Waist</h1>
