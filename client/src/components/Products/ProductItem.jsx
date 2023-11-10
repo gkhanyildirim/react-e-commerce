@@ -3,7 +3,12 @@ import "./productitem.css";
 import { CartContext } from "../../context/CartProvider";
 
 const ProductItem = ({ productItem }) => {
-  const { addToCard } = useContext(CartContext);
+  const { cartItems,addToCard } = useContext(CartContext);
+  
+  const filteredCart = cartItems.find((cartItem)=>
+    cartItem.id === productItem.id
+  );
+
   return (
     <div className="product-item glide__slide glide__slide--active">
       <div className="product-image">
@@ -46,6 +51,7 @@ const ProductItem = ({ productItem }) => {
           <button
             className="add-to-cart"
             onClick={() => addToCard(productItem)}
+            disabled= {filteredCart}
           >
             <i className="bi bi-basket-fill"></i>
           </button>

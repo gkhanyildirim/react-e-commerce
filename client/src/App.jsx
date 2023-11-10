@@ -11,11 +11,11 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 function App() {
   return (
     <>
-      <HomePage />
+      {/* <HomePage /> */}
       {/* <ShopPage /> */}
       {/* <ContactPage /> */}
       {/* <AuthPage /> */}
-      {/* <CartPage /> */}
+      <CartPage />
       {/* <BlogPage /> */}
       {/* <BlogDetailsPage /> */}
       {/* <ProductDetailsPage /> */}

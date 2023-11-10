@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartItem from "./CartItem";
+import { CartContext } from "../../context/CartProvider";
 
 const CartTable = () => {
+
+const {cartItems} = useContext(CartContext);
+
   return (
-    <table classNameName="shop-table">
+    <table className="shop-table">
       <thead>
         <tr>
-          <th classNameName="product-thumbnail">&nbsp;</th>
-          <th classNameName="product-thumbnail">&nbsp;</th>
-          <th classNameName="product-name">Product</th>
-          <th classNameName="product-price">Price</th>
-          <th classNameName="product-quantity">Quantity</th>
-          <th classNameName="product-subtotal">Subtotal</th>
+          <th className="product-thumbnail">&nbsp;</th>
+          <th className="product-thumbnail">&nbsp;</th>
+          <th className="product-name">Product</th>
+          <th className="product-price">Price</th>
+          <th className="product-quantity">Quantity</th>
+          <th className="product-subtotal">Subtotal</th>
         </tr>
       </thead>
-      <tbody classNameName="cart-wrapper">
-        <CartItem />
-        <CartItem />
+      <tbody className="cart-wrapper">
+        {cartItems.map((cartItem)=>(
+          <CartItem cartItem={cartItem} key={cartItem.id} />
+        ))}
+        
+        
       </tbody>
     </table>
   );
