@@ -21,6 +21,7 @@ function PrevBtn({ onClick }) {
 }
 
 const Products = () => {
+  
   const [products] = useState(productsData);
   const sliderSettings = {
     dots: false,
@@ -30,20 +31,20 @@ const Products = () => {
     nextArrow: <NextBtn />,
     prevArrow: <PrevBtn />,
     autoplaySpeed: 3000,
-    autoplay : true,
-    responsive:[
+    autoplay: true,
+    responsive: [
       {
-      breakpoint: 992,
-      settings:{
-        slidesToShow: 2,
-      },
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
       },
       {
         breakpoint: 520,
-        settings:{
+        settings: {
           slidesToShow: 1,
         },
-        },
+      },
     ],
   };
 
@@ -58,7 +59,7 @@ const Products = () => {
           <div className="glide__track">
             <Slider {...sliderSettings}>
               {products.map((product) => (
-                <ProductItem product={product} key={product.id} />
+                <ProductItem productItem={product} key={product.id}/>
               ))}
             </Slider>
           </div>
